@@ -4,7 +4,8 @@ In this demonstration, we will go over how to connect a motor to Raspberry-Pi (4
 
 Requirements:
 * Raspberry-Pi installed with Raspian: Below is version for my Raspian. 
-	
+
+
 ```
 $cat /etc/os-release
 ```
@@ -86,7 +87,7 @@ Color Codes for cables:
     * Raspberry Pi PIN 2 to L293D PIN 1
 * Connect Ground
     * We are using Raspberry Pi PIN 3
-    * We are connecting ground on breadboard to the vertical connections, so we dont have to use multiple ground pins on the Pi. Instead, we could use the vertical connections. As shown in the screenshot, if the Ground is connected as shown in __!__, the whole vertical line is ground now. 
+    * We are connecting ground on breadboard to the vertical connections, so we dont have to use multiple ground pins on the Pi. Instead, we could use the vertical connections. As shown in the screenshot, if the Ground is connected as shown in __1__, the whole vertical line is ground now. 
     
   Picture for above two connections are below:
 
@@ -115,14 +116,12 @@ Color Codes for cables:
     * Connect the Batteries's Positive to the vertical connection same as PIN 9's.
     * Connect the Batteries's ground to ground vertical connection. 
   
-  Shown in the image below.
-  
 * Connect Motor with L293D Chip
     * Connect the motor with PIN 3 and PIN 6 of L293D
   
   Above 2 connections are shown in below image:
   
-  ![alt text](../../images/motor-battery.jpeg)
+  ![alt text](../../images/motor-battery-1.jpeg)
   
 * Connections are all done. 
 
