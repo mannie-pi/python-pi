@@ -7,3 +7,4 @@ There are multiple toys in this project. Below is a list:
 * Basic Circuit to run the motor: src/motor-basic
 * Control the speed of the motor: Yet to come
 * Control the direction of the motor: Yet to come 
+* Control the motor using a switch: Yet to come
