@@ -65,28 +65,30 @@ GPIO.setmode(GPIO.BCM)
 ```
 
 ### Reading Pin numbers on L293D Chip
-I have gone through multiple articles and demonstrations and the pin numbers seemed to be off when connecting it between sites. So, I have created my reference in the below image. I am using this reference for the circuit. The marker in the image is indicating where i started with. (If they are inaccurate, pardon me.) 
-
-In some articles, i read we could reference the circle on the aligned to one side (Not the big one in the center of one side). So, we could use the small circle aligned to one side and go to the bottom of that side and that would be the Pin-number 1.
+I have gone through multiple articles and where the PIN#1 started from seemed different in different articles. After few trials and errors, i came up with the Figure#2 reference image. [And based on some other articles (one of them linked here), this looks accurate](https://elec-club-iitb.github.io/blog/2016/08/l293d/). However, this is the reference i will be using for this demonstration.
 
 ![alt text](../../images/L293DWithPinNumbers.png)
 
-## Beginning the connections between Raspberry Pi and L293D Chip 
+## Connections between Raspberry Pi and L293D Chip 
 This should be done when Raspberry Pi is powered off to avoid any short circuits on accident.
 
 Color Codes for cables: 
-* Red: Power from PI 
+* Red: Power from PI PIN#2 
 * Black: Ground 
-* Green: Pi PIN 36 
-* Yellow: Pi PIN 38
-* Orange: Pi PIN 40
-* White: Connection from L293D to Motor. PIN 3 and PIN 6 of L293D to Motor.
-* Blue: Batter to L293D PIN 9
+* Green: Pi PIN#36 
+* Yellow: Pi PIN#38
+* Orange: Pi PIN#40
+* White: Connection from L293D to Motor. PIN#3 and PIN#6 of L293D to Motor.
+* Blue: Batter to L293D PIN#9
 
-* Connect Power-in
-    * Raspberry Pi PIN 2 to L293D PIN 1
-* Connect Ground
-    * We are using Raspberry Pi PIN 3
+
+## Begin Connections
+
+
+* Connect Power-in (Red Cables)
+    * Raspberry Pi PIN#2 to L293D PIN#1
+* Connect Ground (Black Cables)
+    * We are using Raspberry Pi PIN#3
     * We are connecting ground on breadboard to the vertical connections, so we dont have to use multiple ground pins on the Pi. Instead, we could use the vertical connections. As shown in the screenshot, if the Ground is connected as shown in __1__, the whole vertical line is ground now. 
     
   Picture for above two connections are below:
@@ -96,28 +98,28 @@ Color Codes for cables:
 * For easy access to the ground on the other side of breadboard, we connect the vertical line with vertical line on other side as shown in below image.
 
 
-* Continue on Grounds for L293D, below are the PINS on L293D which need to be grounded.
-    * PIN 4, 5 
-    * PIN 12, 13 
+* Continue on Grounds for L293D, below are the PINS on L293D which need to be grounded. (Black Cables)
+    * PIN #4, #5 
+    * PIN #12, #13 
     
   ![alt text](../../images/ground-L293D.jpeg)
 
 * Connect Pi's GPIO to L293D 
-    * Pi PIN 36 to L293D PIN 2
-    * Pi PIN 38 to L293D PIN 7
-    * Pi PIN 40 to L293D PIN 8
+    * Pi PIN#36 to L293D PIN#2 (Green Cables)
+    * Pi PIN#38 to L293D PIN#7 (Yellow Cables)
+    * Pi PIN#40 to L293D PIN#8 (Orange Cables)
   
   Shown in below image: 
   
   ![alt text](../../images/GPIOToL293D.jpeg)
 
 * Connect Power using AA Battery to L293D Chip
-    * Connect the PIN 9 of Chip with one of the vertical connections.
-    * Connect the Batteries's Positive to the vertical connection same as PIN 9's.
-    * Connect the Batteries's ground to ground vertical connection. 
+    * Connect the PIN#9 of Chip with one of the vertical connections. (Blue Cable)
+    * Connect the Batteries's Positive to the vertical connection same as PIN#9's. (Blue Cable)
+    * Connect the Batteries's ground to ground vertical connection. (Black Cable)
   
-* Connect Motor with L293D Chip
-    * Connect the motor with PIN 3 and PIN 6 of L293D
+* Connect Motor with L293D Chip (White Cables)
+    * Connect the motor with PIN#3 and PIN#6 of L293D
   
   Above 2 connections are shown in below image:
   
